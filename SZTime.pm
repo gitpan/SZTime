@@ -8,7 +8,7 @@ our ($VERSION, @ISA, @EXPORT);
 
 use Exporter ();
 
-$VERSION = "0.1.0";
+$VERSION = "0.1.2";
 
 @ISA = qw(Exporter);
 @EXPORT = qw(&SZTime);
@@ -23,6 +23,11 @@ sub SZTime {
 }
 
 sub SZTime::log {
+    my $time = Time::SZTime::SZTime();
+    return log($time);
+}
+
+sub SZTime::log10 {
     my $time = Time::SZTime::SZTime();
     $time = log($time)/log(10);
     return $time;
@@ -40,7 +45,9 @@ SZTime - computes the local SZTime
 
     use Time::SZTime;
 
-    $time = SZTime();
+    $time = SZTime();        # SZTime Representation as Integer
+    $time = SZTime::log();   # SZTime Represantation as Base e Logarithm
+    $time = SZTime::log10(); # SZTime Represantation as Base-10 Logarithm
 
 =head1 DESCRIPTION
 
