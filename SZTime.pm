@@ -1,4 +1,4 @@
-# $Id: SZTime.pm,v 1.6 2002/03/21 11:18:59 Vutral Exp $
+# $Id: SZTime.pm,v 1.7 2002/08/14 17:15:58 Vutral Exp $
 package Time::SZTime;
 
 ## See POD after __END__
@@ -9,7 +9,7 @@ our ($VERSION, @ISA, @EXPORT);
 
 use Exporter ();
 
-$VERSION = "0.13";
+$VERSION = "0.14";
 
 @ISA = qw(Exporter);
 @EXPORT = qw(&SZTime);
